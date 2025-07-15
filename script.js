@@ -1,6 +1,6 @@
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
-
+const navbar = document.querySelector('.navbar'); 
 function toggleMenu() {
   navLinks.classList.toggle('show');
   burger.classList.toggle('toggle');
@@ -30,3 +30,32 @@ setInterval(() => {
   current = (current + 1) % slides.length;
   showSlide(current);
 }, 5000);
+
+
+
+let lastScrollTop = 0; 
+const scrollThreshold = 50; 
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop && scrollTop > navbar.offsetHeight + scrollThreshold) {
+    
+    navbar.classList.remove('show-nav'); 
+  } else if (scrollTop < lastScrollTop && scrollTop > 0) {
+   
+    navbar.classList.add('show-nav');
+  } else if (scrollTop === 0) {
+    
+    navbar.classList.add('show-nav');
+  }
+
+  lastScrollTop = scrollTop;
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.pageYOffset === 0) {
+    navbar.classList.add('show-nav');
+  }
+});
