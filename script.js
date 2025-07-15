@@ -26,7 +26,6 @@ function currentSlide(index) {
   showSlide(index);
 }
 
-// Optional: Auto-slide every 5 sec
 setInterval(() => {
   current = (current + 1) % slides.length;
   showSlide(current);
