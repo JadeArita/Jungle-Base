@@ -28,6 +28,7 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
+      <li><a href="#feature">Feature</a></li>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#contact">Contact Us</a></li>
@@ -38,7 +39,7 @@
   <div class="slide active" style="background-image: url('images/slide1.png');">
     <div class="overlay">
       <h1>Discover Nature’s Best Brew</h1>
-      <button onclick="window.location.href='#'">View Menu</button>
+      <button onclick="window.location.href='#menu'">View Menu</button>
     </div>
   </div>
   <div class="slide" style="background-image: url('images/slide2.png');">
@@ -70,20 +71,69 @@
   </div>
 </section>
 
-<section class="offer-section">
-    <img src="images/prod1.jpg" alt="Jungle Base Coffee" />
-    <img src="images/prod5.jpg" alt="Jungle Base Coffee" />
-    <img src="images/prod2.jpg" alt="Jungle Base Coffee" />
-    <img src="images/prod6.jpg" alt="Jungle Base Coffee" />
-    <img src="images/prod7.jpg" alt="Jungle Base Coffee" />
-    <img src="images/prod3.jpg" alt="Jungle Base Coffee" />
-    <img src="images/prod8.jpg" alt="Jungle Base Coffee" />
-    <img src="images/prod4.jpg" alt="Jungle Base Coffee" />
+<section id="feature" class="feature-section">
+    <h2>Feature</h2>
+    <div class="feature-row">
+        <h3>Delicious Delights</h3>
+        <div class="feature-items">
+            <div class="feature-item">
+                <img src="images/prod1.jpg" alt="Coffee preparation" />
+            </div>
+            <div class="feature-item">
+                <img src="images/prod3.jpg" alt="Latte art" />
+            </div>
+            <div class="feature-item">
+                <img src="images/prod2.jpg" alt="Delicious pasta dish" />
+            </div>
+            <div class="feature-item">
+                <img src="images/prod4.jpg" alt="Assortment of pastries" />
+            </div>
+            
+            <p>At Jungle Base, every cup of coffee and every plate served is made with love and passion. From our rich, freshly brewed blends to our mouthwatering pastries and comfort food favorites, each bite is a treat for your taste buds. Whether you're here for a hearty brunch or a sweet afternoon pick-me-up, our menu is designed to satisfy cravings and warm the heart. It’s not just food—it’s a delicious experience you’ll want to come back to again and again.</p>
+        </div>
+    </div>
+
+    <div class="feature-row">
+        <h3>Our Ambiance</h3>
+        <div class="feature-items">
+            <div class="feature-item">
+                <img src="images/prod7.jpg" alt="Outdoor seating area" />
+            </div>
+            <div class="feature-item">
+                <img src="images/prod5.jpg" alt="Cozy cabin exterior" />
+            </div>
+            <div class="feature-item">
+                <img src="images/prod8.jpg" alt="Indoor seating area" />
+            </div>
+            <div class="feature-item">
+                <img src="images/prod6.jpg" alt="Spacious interior with natural light" />
+            </div>
+            <p>At Jungle Base, we’ve created more than just a café—we’ve built a peaceful hideaway where you can escape the noise and soak in the calm. Surrounded by lush greenery, cozy corners, and warm wooden interiors, every space invites you to slow down and relax. Whether you're catching up with friends, working remotely, or enjoying quiet time alone, our natural setting and inviting atmosphere make it the perfect place to unwind. It's more than a visit—it’s a vibe you'll fall in love with.</p>
+        </div>
+    </div>
+
+    <div class="feature-row feature-video-row">
+    <h3>Experience Jungle Base Coffee</h3>
+    <div class="feature-video-container">
+        <iframe
+            src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fjunglebase.coffee%2Fvideos%2F550088469711361%2F&show_text=false&width=382&t=0"
+            width="382"
+            height="476"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fjunglebase.coffee%2Fvideos%2F4496480690458219%2F&show_text=false&width=560&t=0" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <p class="copyright-notice">© 2025 Jungle Base Coffee. All rights reserved. Video content sourced from official Facebook page.</p>
+    </div>
+</div>
 </section>
 
 
 <section id="menu" class="menu-section">
-  <h2>Our Menu</h2>
+  <h2>Menu</h2>
 
   <div class="menu-columns">
     <div class="menu-column">
@@ -281,7 +331,7 @@
     <div class="contact-right-column">
       <div class="contact-form-container">
         <h3>Send Us a Message</h3>
-        <form action="#" method="POST" class="contact-form">
+        <form id="contactForm" action="#" method="POST" class="contact-form">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" required>
 
@@ -293,6 +343,7 @@
 
           <button type="submit">Send Message</button>
         </form>
+        <div id="confirmationMessage" class="confirmation-message"></div>
       </div>
 
       <div class="contact-map-container">
@@ -320,6 +371,9 @@
   </div>
 </footer>
 
+<button id="scrollToTopBtn" title="Go to top">&#x2191;</button>
+
   <script src="script.js"></script>
+
 </body>
 </html>
