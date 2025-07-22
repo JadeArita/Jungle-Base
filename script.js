@@ -59,3 +59,49 @@ document.addEventListener('DOMContentLoaded', () => {
     navbar.classList.add('show-nav');
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contactForm');
+      const confirmationMessage = document.getElementById('confirmationMessage');
+
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        if (contactForm.checkValidity()) {
+          confirmationMessage.textContent = 'Message submitted successfully!';
+          confirmationMessage.style.display = 'block'; 
+          contactForm.reset(); 
+
+         
+          setTimeout(() => {
+            confirmationMessage.style.display = 'none';
+            confirmationMessage.textContent = '';
+          }, 3000);
+        } else {
+         
+        }
+      });
+    });
+
+
+let mybutton = document.getElementById("scrollToTopBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+
+mybutton.addEventListener("click", function() {
+    
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
